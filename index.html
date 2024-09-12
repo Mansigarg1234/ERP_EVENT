@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System ERP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Event Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('login')">Login</a></li>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('events')">Events</a></li>
+                <li><a href="#" onclick="showSection('contact')">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="login" class="section">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <section id="home" class="section hidden">
+        <div class="banner">
+            <h2>Welcome to the Event Management System</h2>
+            <p>Plan and manage your events effortlessly.</p>
+            <a href="#" class="btn" onclick="showSection('events')">View Events</a>
+        </div>
+    </section>
+
+    <section id="events" class="section hidden">
+        <h2>Upcoming Events</h2>
+        <div class="event-card">
+            <h3>Conference</h3>
+            <p>Date: <input type="date" id="eventDate1" name="eventDate1"></p>
+            <p>Venue: XYZ Auditorium</p>
+            <button class="register-btn">Register Now</button>
+        </div>
+
+        <div class="event-card">
+            <h3>Music Festival</h3>
+            <p>Date: <input type="date" id="eventDate2" name="eventDate2"></p>
+            <p>Venue: ABC Arena</p>
+            <button class="register-btn">Register Now</button>
+        </div>
+    </section>
+
+    <section id="contact" class="section hidden">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Event Management ERP</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
